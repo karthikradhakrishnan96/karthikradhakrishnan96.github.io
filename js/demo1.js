@@ -8,7 +8,8 @@
 	var open = false;
 	button.addEventListener('click', handler, false);
 	wrapper.addEventListener('click', cnhandle, false);
-
+	overlay.addEventListener('click', cnhandle, false);
+	
 	function cnhandle(e){
 		e.stopPropagation();
 	}
@@ -21,7 +22,7 @@
 	    	openNav();
 	  	}
 	 	else{
-	    	closeNav();
+	    	closeNav(e);
 	  	}
 	}
 	function openNav(){
@@ -30,7 +31,7 @@
 	    classie.add(overlay, 'on-overlay');
 	    classie.add(wrapper, 'opened-nav');
 	}
-	function closeNav(){
+	function closeNav(e){
 		open = false;
 		button.innerHTML = "+";
 		classie.remove(overlay, 'on-overlay');

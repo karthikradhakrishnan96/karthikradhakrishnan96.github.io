@@ -6,9 +6,9 @@
 
     <link rel="stylesheet" href="./css/component1.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link rel="stylesheet" href="./css/materialize.min.css">
     <script src="js/modernizr-2.6.2.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <style media="screen">
       html,body{
         background-color: #f2f2f5;
@@ -26,6 +26,11 @@
       .cn-button:hover, .cn-button:focus{
         background-color: #e53935;
       }
+	  
+	  .cn-button {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	  }
+	  
       .light{
         background-color: #f2f2f5;
         color: #42A5F5;
@@ -35,20 +40,20 @@
       }
 
       .dark h1,.dark h2,.dark h3,.dark h4,h5,.dark h6 {
-        font-family: "Lato", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+        font-family: "Quicksand", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
         color: #fff;
         text-align: center;
         padding: 1rem 0;
       }
 
       .light h1,.light h2,.light h3,.light h4,h5,.light h6 {
-        font-family: "Lato", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+        font-family: "Quicksand", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
         color: #42A5F5;
         text-align: center;
         padding: 1rem 0;
       }
       .class {
-      	font-family: Lato, Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+      	font-family: Quicksand, Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
       }
       .background-wm{
         background-image: url("./images/kai3.jpg");
@@ -75,13 +80,17 @@
         *{
           font-size:2.2rem;
         }
-        h1,h2,h3,h4,h5,h6{}
+        h3 {
+		font-size : 6rem;
       }
+	  h5 {
+		font-size : 4rem;
+	  }
     </style>
   </head>
   <body onload = "init()">
     <!-- <div class="background-wm"></div> -->
-    <button type="button" name="button" class="cn-button" onmouseover = "openNav()" id="cn-button" style="color: white;">+</button>
+    <button type="button" name="button" onmouseenter = "maybeOpen()" class="cn-button" id="cn-button" style="color: white;">+</button>
     <div class="cn-wrapper" id="cn-wrapper" onmouseleave = "closeNav()">
       <ul>
         <li><a href="#about" onclick="closeNav()"><span class="fa fa-2x fa-user"></span></a></li>
@@ -98,7 +107,7 @@
       <div class="container">
         <div class="row">
           <div class="col l12 m12 s12">
-            <h3>KARTHIK RADHAKRISHNAN <p id = "titleText">ENGINEER</p></h3>
+            <h3>KARTHIK RADHAKRISHNAN <h5 style = "color:#e53935" id = "titleText">ENGINEER</h5></h3>
             <p class="black-text">
               Hello, I'm Karthik from Earth Dimension C-137. I'm an aspiring graduate school
               applicant looking to specialize in Machine Learning and Natural Language Processing.
@@ -108,7 +117,7 @@
               <br><br>
               I love teaching. In my free time, I take training sessions for freshers at Endurance and mentor them with coding guidelines, debugging etc. The idea of imparting my knowledge to enrich someone else's holds a special place in my heart.
               <br><br>
-              Feel free to reach out to me at karthikradhakrishnan96@gmail.com or at +91-9741091140
+              You contact me at <a href = "mailto:karthikradhakrishnan96@gmail.com" target = "_blank">karthikradhakrishnan96@gmail.com</a> or at +91-9741091140
           </p>
           </div>
         </div>
@@ -124,7 +133,6 @@
       <div class="container">
         <h3 class=" "> Experience</h3>
         <div class="row">
-
           <div class="col l6 m12 s12">
             <div class="card-panel">
               <span class="">
@@ -147,7 +155,7 @@
           <div class="col l6 m12 s12">
             <div class="card-panel">
               <span class="">
-                <h5>Directi Web Technology</h5>
+                <h5>Endurance International Group - Directi</h5>
                 <p class="black-text">
                   <b>Jarvis</b> – Automated diagnosis against a
                   domain. Modelled various tests as a
@@ -168,12 +176,12 @@
                   customers. Added API authentication for
                   customer & contributed to re-architecture
                   of orderbox
-				  <br>
-				  <br>
                 </p>
               </span>
             </div>
           </div>
+		  </div>
+		  <div class = "row">
 
           <div class="col l12 m12 s12">
             <div class="card-panel">
@@ -181,7 +189,7 @@
                 <h5>Goldman Sachs</h5>
                 <p class="black-text">
                   <b>Automated</b> form onboarding process for
-                  regulatory reporting
+                  reguQuicksandry reporting
                   <br><br>
                   <b>Improved</b> overall efficiency by 80%
                 </p>
@@ -214,10 +222,6 @@
                 <b>Scraped</b> a Shakespearean-Modern English parallel dataset from Spark Notes
 				<br>
                 <b>Implemented</b> a deep Encoder-Decoder with attention in TensorFlow.
-				<br>
-				<br>
-				<br>
-				<br>
 				</p>
 			  </span>
             </div>
@@ -275,7 +279,6 @@
 				<br>
 				<b>Implemented</b> orchestration among
 				nodes for data replication
-				<br>
 				</p>
               </span>
             </div>
@@ -293,7 +296,6 @@ of question difficulty as an
 application of binomial proportion
 confidence interval
 				</p>
-				<br>
               </span>
             </div>
           </div>
@@ -356,8 +358,8 @@ confidence interval
               <ul class="collection with-header" style="border: 1px solid white;">
                 <li class="collection-header">
 				<p class = "black-text">
-                  				Karthik R*, <b>Aman
-				Achpal*</b>, Vinayshekhar
+                  				<b>Karthik R*</b>, Aman
+				Achpal*, Vinayshekhar
 				BK*, Anantharaman Palacode
 				Narayana Iyer, Channa Bankapur
 				(2017) <a href="https://openreview.net/pdf?id=SkbJrSVFe" target="_blank">“Neu0”</a> at <b>International
@@ -371,8 +373,8 @@ confidence interval
                 </li>
                 <li class="collection-header">
                   <p class="black-text">
-				  				Vinayshekhar BK, Karthik R,
-				<b>Aman Achpal</b> (2016) <a href="http://article.sciencepublishinggroup.com/pdf/10.11648.j.ijdst.20160201.14.pdf" target="_blank"> “Efficient
+				  				Vinayshekhar BK, <b>Karthik R</b>,
+				Aman Achpal (2016) <a href="http://article.sciencepublishinggroup.com/pdf/10.11648.j.ijdst.20160201.14.pdf" target="_blank"> “Efficient
 				computation of binomial
 				coefficients using Splay Trees”</a>
 				published in the International
@@ -457,7 +459,8 @@ function init() {
    if(INITIAL_WORD === "ENGINEER")
 		INITIAL_WORD = "RESEARCHER";
    else if(INITIAL_WORD === "RESEARCHER")
-		INITIAL_WORD = "CODER";
+		INITIAL_WORD = "DEVELOPER";
+	
 	else {
 			INITIAL_WORD = "ENGINEER";
 
@@ -468,6 +471,11 @@ function init() {
  },50)
  
 }
+	function maybeOpen() {
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+	if (!isMobile)
+		openNav();
+	}
 	
 	</script>
   </body>
