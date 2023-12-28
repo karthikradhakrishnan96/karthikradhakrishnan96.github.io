@@ -18,3 +18,19 @@ body, html {
         background-image: url("./assets/cover-v4.png");
     }
 }
+
+.desktop-only{
+  display: block;
+}
+
+.mobile-only{
+  display: none;
+}
+@media (orientation: portrait) and (max-width: 1200px){
+  .mobile-only{
+      display: block!important;
+  }
+  .desktop-only {
+    display: none!important;
+  }
+}
