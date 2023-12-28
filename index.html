@@ -1,513 +1,124 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-	<meta name="theme-color" content="#e53935" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#e7e7de" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>    <link href="./story.css" rel="stylesheet" crossorigin="anonymous">
 
-    <title>Karthik Radhakrishnan</title>
-
-    <link rel="stylesheet" href="./css/component1.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/materialize.min.css">
-    <script src="js/modernizr-2.6.2.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <style media="screen">
-      html,body{
-        background-color: #f2f2f5;
-        color: #000;
-        text-align: justify;
-      }
-      .black-text{
-        text-align: justify;
-      }
-      .cn-button, .cn-button:hover{
-        color: #fff;
-        background-color: #e53935;
-      }
-
-      .cn-button:hover, .cn-button:focus{
-        background-color: #e53935;
-      }
-	  
-	  .cn-button {
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
-	  }
-	  
-      .light{
-        background-color: #f2f2f5;
-        color: #42A5F5;
-      }
-      .card-panel{
-        color: #42A5F5;
-      }
-
-      .dark h1,.dark h2,.dark h3,.dark h4,h5,.dark h6 {
-        font-family: "Quicksand", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-        color: #fff;
-        text-align: center;
-        padding: 1rem 0;
-      }
-
-      .light h1,.light h2,.light h3,.light h4,h5,.light h6 {
-        font-family: "Quicksand", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-        color: #42A5F5;
-        text-align: center;
-        padding: 1rem 0;
-      }
-      .class {
-      	font-family: Quicksand, Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
-      }
-      .background-wm{
-        background-image: url("./images/kai3.jpg");
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-      }
-      .dark{
-        background-color: #42a5f5;
-        color: #fff;
-        font: 600;
-      }
-      #achievements, #awards{
-        padding: 3% 0;
-      }
-      .invert, .invert h5{
-        color: #fff;
-      }
-  .button, .button:focus{
-    color: #fff !important;
-  }
-      @media only screen and (max-device-width: 768px) {
-        *{
-          font-size:2.2rem;
-        }
-        h3 {
-		font-size : 6rem;
-      }
-	  h5 {
-		font-size : 4rem;
-	  }
-    </style>
   </head>
-  <body onload = "init()">
-    <!-- <div class="background-wm"></div> -->
-    <button type="button" name="button" onmouseenter = "maybeOpen()" class="cn-button" id="cn-button" style="color: white;">+</button>
-    <div class="cn-wrapper" id="cn-wrapper" onmouseleave = "closeNav()">
-      <ul>
-        <li><a href="#about" onclick="closeNav()"><span class="fa fa-2x fa-user"></span></a></li>
-        <li><a href="#achievements" onclick="closeNav()"><span class="fa fa-2x fa-briefcase"></span></a></li>
-        <li><a href="#projects" onclick="closeNav()"><span class="fa fa-2x fa-code-fork"></span></a></li>
-        <li><a href="#awards" onclick="closeNav()"><span class="fa fa-2x fa-trophy"></span></a></li>
-        <li><a href="#pedagogy" onclick="closeNav()"><span class="fa fa-2x fa-edit"></span></a></li>
-	  </ul>
+  <body>
+    <div class="bg cover"></div>
+
+    <div class="bg" style="position: relative;">
+      <img src="./assets/page2-v5.png" style="width: 100%; height: 100%;">
+      <a href="https://maps.app.goo.gl/jShZa47w3mTNMDNd9"><div style="position: absolute; left: 25%; top: 85%; width: 20%; height: 10%;"></div></a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"><div style="position: absolute; left: 60%; top: 85%; width: 20%; height: 10%;"></div></a>
     </div>
-    <div id="cn-overlay" class="cn-overlay"></div>
 
+    <section class="with-margins" style="display: none;" >
+        <div class="container" style="background-image: url('./assets/page-2.png')">
+            <div class="row"  style="padding-top: 20px;">
+              <h2 style="text-align: center; color: #a5593c;"> Schedule of events</h2>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="padding-top: 20px;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6" style="padding-top: 20px;">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
 
-    <div id="about" class="light">
-      <div class="container">
-        <div class="row">
-          <div class="col l12 m12 s12">
-            <h3>KARTHIK RADHAKRISHNAN <h5 style = "color:#e53935" id = "titleText">ENGINEER</h5></h3>
-	     <h5 >Last Updated : Aug 2019</h5>
-
-            <p class="black-text">
-              Hello, I'm Karthik from Earth Dimension C-137. I'm a graduate student at Carnegie Mellon University, specializing in Machine Learning and Natural Language Processing.
-              I work on a variety of languages (Java, Python, JavaScript, HTML & CSS, C), frameworks (Keras, Tensorflow, NumPy, Spring Boot, React), and technologies (Deep Learning, NLP, Microservices, Distributed Systems)
-              <br>
-              I have multiple publications to my name including one on neural program execution which was published at ICLR 2017. I'm also a hackathon enthusiast and have won multiple hackathons at national and international levels.
-              <br>
-              I love teaching. In my free time, I take training sessions for freshers and mentor them at endurance. The idea of imparting my knowledge to enrich someone else's holds a special place in my heart.
-              <br>
-              You contact me at <a href = "mailto:karthikradhakrishnan96@gmail.com" target = "_blank">karthikradhakrishnan96@gmail.com</a> or at +1-724-506-0009
-          </p>
-          </div>
         </div>
-        <div class="row">
-          <div class="col l2 m2 s2 offset-l5 offset-m5 offset-s5">
-            <a target = "_blank" href = "https://drive.google.com/file/d/1YeOIun2LKOgHDn9_qG1qP3LHthAP2DXC/view?usp=sharing" class="waves-effect waves-light btn-large red darken-1">Resume</a>
-          </div>
+
+    </section>  
+
+    <section class="with-margins animated fadeIn">
+        
+<div class="container-fluid blue-bg" style="display: None;">
+    <div class="container">
+      <h2 class="pb-3 pt-2">Vertical Left-Right Timeline</h2>
+      <!--first section-->
+      <div class="row align-items-center how-it-works">
+        <div class="col-2 text-center bottom">
+          <div class="circle animate__animated animate__pulse animate__infinite">1</div>
+        </div>
+        <div class="col-6">
+          <h5>Fully Responsive</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+        </div>
+      </div>
+      <!--path between 1-2-->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner top-right"></div>
+        </div>
+        <div class="col-8">
+          <hr/>
+        </div>
+        <div class="col-2">
+          <div class="corner left-bottom"></div>
+        </div>
+      </div>
+      <!--second section-->
+      <div class="row align-items-center justify-content-end how-it-works">
+        <div class="col-6 text-right">
+          <h5>Using Bootstrap</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
+        </div>
+        <div class="col-2 text-center full">
+          <div class="circle">2</div>
+        </div>
+      </div>
+      <!--path between 2-3-->
+      <div class="row timeline">
+        <div class="col-2">
+          <div class="corner right-bottom"></div>
+        </div>
+        <div class="col-8">
+          <hr/>
+        </div>
+        <div class="col-2">
+          <div class="corner top-left"></div>
+        </div>
+      </div>
+      <!--third section-->
+      <div class="row align-items-center how-it-works">
+        <div class="col-2 text-center top">
+          <div class="circle">3</div>
+        </div>
+        <div class="col-6">
+          <h5>Now with Pug and Sass</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p>
         </div>
       </div>
     </div>
-
-    <div id="achievements" class="dark">
-      <div class="container">
-        <h3 class=" "> Experience</h3>
-        <div class="row">
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Neu0 - ICLR 2017</h5>
-
-                <p class="black-text">
-                  <b>Researched</b> deep-learning based program induction and execution models.
-                    <br><br>
-                  <b>Conceptualized</b> “Program Embeddings” – a vectorized representation of Assembly Language program statements (eg. ARM, MIPS).
-                  <br><br>
-                  <b>Augmented</b> the Neural Turing machine with novel ways to access large main memory, a fuzzy register bank and an instruction bank.
-                  <br><br>
-                    <b>Ensembled</b> Neural Networks whose execution was governed by the NTM controller and program counter to learn to execute ARM code from examples.
-                                  <br><br>
-                  <b>Published</b> the outcomes of my research at the International Conference for Learning Representations, (ICLR Workshop Track) Toulon 2017.
-                  <b>Open Sourced</b> the code, dataset used for training and demo at neu0.github.io
-                </p>
-              </span>
-            </div>
-          </div>
-
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Endurance International Group - Directi</h5>
-                <p class="black-text">
-                  <b>Jarvis</b> – Conversational Form Chatbot which runs
-                    diagnostic tests against a website and offers resolutions.
-                    Models different tests as a tree and identifies the most important
-                    issues by asking users questions to aid its inference.
-                    Implemented a tf-idf based related tickets finder to reduce SLA for
-                    support tickets.
-                  <br><br>
-                  <b>Bigrock Instant</b> - Architected a RESTful microservice based order management
-                  and support system for building instant websites.  Built a central
-                  authentication system using JWTs and Redis behind a Netflix Zuul Gateway.
-                  <br><br>
-                  <b>ESCache Search</b> - Developed a CQRS based Search service catering to
-                  search-as-you-type requests using ElasticSearch on SpringBoot.
-                  <br><br>
-                  <b>Orderbox</b> - Maintained the retail
-                  division of order management platform which powers 3.2M
-                  customers. Added API authentication for
-                  customers & integrated new services like Office365 and payment gateways.
-                </p>
-              </span>
-            </div>
-          </div>
-		  </div>
-		  <div class = "row">
-
-          <div class="col l12 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Goldman Sachs</h5>
-                <p class="black-text">
-                  <b>Automated</b> form onboarding process for
-                  regulatory reporting
-                  <br><br>
-                  <b>Improved</b> overall efficiency by 80%
-                </p>
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div id="projects" class="light">
-
-      <div class="container">
-        <h3 class=""> Projects</h3>
-        <div class="row">
-
-
-
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Neural Shakespeare</h5>
-				<p class = "black-text">
-                <b>Inspired</b> by Neural Style Transfer which transfers an image’s style to another image; Sought to transfer writing style while preserving semantic content
-				<br>
-                <b>Investigated</b> the feasibility of casting this as a Machine-Translation problem
-				<br>
-                <b>Scraped</b> a Shakespearean-Modern English parallel dataset from Spark Notes
-				<br>
-                <b>Implemented</b> a deep Encoder-Decoder with attention in TensorFlow.
-				</p>
-			  </span>
-            </div>
-          </div>
-
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>NNLIB</h5>
-                <p class = "black-text">
-				<b>Designed</b> a generic Neural-Network framework based on the computational graph concept using NumPy and first principles to complement my theoretical understanding.
-				<br>
-                <b>Implemented</b> Feedforward, Recurrent and Convolutional Neural Networks.
-				<br>
-                <b>Implemented</b> AdaGrad, RMSProp; Cross-Entropy and Mean Squared loss.
-				<br>
-                <b>Benchmarked</b> the implementation with MNIST, CIFAR 10, and PTB datasets.
-				<br>
-                <b>Compared</b> RNN, CNN and MaxEnt models for Twitter text-classification.
-				</p>
-              </span>
-            </div>
-          </div>
-
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Shelfie</h5>
-                <p class = "black-text">
-				<b>Conceptualized</b> a system capable of monitoring supermarket shelves and automatically reacting to events such as mislabeled or out-of-stock products.
-				<br>
-                <b>Implemented</b> image segmentation using the Watershed algorithm using OpenCV to yield (product, label) tuples for a given image of the supermarket shelf.
-				<br>
-                <b>Built</b> a product detector using image feature extraction and a KNN classifier. A CNN was not used due to sparsity of training examples.
-				<br>
-                <b>Built</b> a Seq2Seq OCR engine using a Convolutional Stack Encoder and Recurrent Stack Decoder with CTC log-loss objective function. Trained first on synthetic data (due to sparse training data) followed by transfer learning.
-				<br>
-                <b>Presented</b> the work at ABinBev HackTheWorld and placed 3rd out of hundreds of contestants comprising both students and working professionals.
-				</p>
-              </span>
-            </div>
-          </div>
-
-          <div class="col l6 m12 s12">
-            <div class="card-panel">
-              <span class="">
-                <h5>Distributed Key Store</h5>
-                <p class = "black-text">				
-                <b>Designed</b> a fault tolerant master-
-				slave based distributed data store
-				<br>
-				<b>Architected</b> an event driven frame-
-				work to ensure consistency and
-				high availability of data
-				<br>
-				<b>Implemented</b> orchestration among
-				nodes for data replication
-				</p>
-              </span>
-            </div>
-			<div class="card-panel">
-              <span class="">
-                <h5>Demonetization</h5>
-                <p class = "black-text">				
-                <b>Designed</b> a hybrid of LSTM and MaxEnt models to perform phrase level sentiment analysis on twitter data
-                    to understand how Indian banks fared with demonetization.
-				<br>
-                    <b>Extracted</b> phrases with Stanford NLP Parser and visualized the results of the hybrid network.
-				<br>
-				</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="awards" class="dark">
-      <div class="container">
-        <h3 class=" "> Achievements and Awards</h3>
-        <div class="row">
-
-          <div class="col l8 offset-l2 m12 s12">
-            <div class="card-panel">
-              <ul class="collection with-header" style="border: 1px solid white;">
-                <li class="collection-header">
-                  <h5>Gold Medalist in PESIT CSE Department</h5>
-                  <div  class = "black-text" style="text-align: center;">
-                    For excellent academic performance(7th rank) with CGPA of 9.85
-                  </div>
-                </li>
-                <li class="collection-header">
-                  <h5>AMD Best Student Project Award</h5>
-                  <div  class = "black-text"  style="text-align: center;">
-                    Awarded best project among over 200
-                    competing projects across different
-                    colleges
-                  </div>
-                </li>
-                 <li class="collection-header">
-                  <h5>JN Tata Endowment</h5>
-                  <div  class = "black-text"  style="text-align: center;">
-                    Received $15,000 scholarship from JN Tata Endowmment towards Graduate studies.
-                  </div>
-                </li>
-                <li class="collection-header">
-                  <h5>Hindustan Unilever Hackathon</h5>
-                  <div  class = "black-text" style="text-align: center;">
-                    3rd place among hundreds of students and
-                    working professionals across the country
-                  </div>
-                </li>
-
-                <li class="collection-header">
-                  <h5>Innojam Hackathon</h5>
-                  <div  class = "black-text" style="text-align: center;">
-                    Runners up in Innojam hackathon for conceptualizing and prototyping EzPro -
-                      Custom invoicing platform for social small businesses
-                  </div>
-                </li>
-
-                <li class="collection-header">
-                  <h5>Prakalpa</h5>
-                  <div  class = "black-text" style="text-align: center;">
-                    Best project among 500+ projects in college fair
-                  </div>
-                </li>
-                  <li class="collection-header">
-                  <h5>Star Performer Award</h5>
-                  <div  class = "black-text" style="text-align: center;">
-                      For supporting retail orderbox and mentoring junior engineers at Endurance.
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div id="pedagogy" class="light" style="padding-bottom: 5%;">
-      <div class="container">
-        <h3 class=""> Publications</h3>
-        <div class="row">
-
-          <div class="col l8 offset-l2 m12 s12">
-            <div class="card-panel">
-              <ul class="collection with-header" style="border: 1px solid white;">
-                <li class="collection-header">
-				<p class = "black-text">
-                  				<b>Karthik R*</b>, Aman
-				Achpal*, Vinayshekhar
-				BK*, Anantharaman Palacode
-				Narayana Iyer, Channa Bankapur
-				(2017) <a href="https://openreview.net/pdf?id=SkbJrSVFe" target="_blank">“Neu0”</a> at <b>International
-				Conference for Learning
-				Representations</b>, Workshop
-				Track (ICLR 2017) Toulon
-			<br>
-			* - equal contribution
-			<br>
-                        </p>
-                </li>
-                <li class="collection-header">
-                  <p class="black-text">
-				  				Vinayshekhar BK, <b>Karthik R</b>,
-				Aman Achpal (2016) <a href="http://article.sciencepublishinggroup.com/pdf/10.11648.j.ijdst.20160201.14.pdf" target="_blank"> “Efficient
-				computation of binomial
-				coefficients using Splay Trees”</a>
-				published in the International
-				Journal on Data Science and
-				Technology, presented at the
-				Student Research Symposium of
-				the 12th International Conference
-				on Distributed Computing and
-				Internet Technology.
-                        </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <script src="./js/jquery.js" charset="utf-8"></script>
-    <script src="./js/materialize.min.js" charset="utf-8"></script>
-    <script src="./js/demo1.js" charset="utf-8"></script>
-    <script src="./js/polyfills.js" charset="utf-8"></script>
-	<script>
-		function rand(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-function getRandomLetter() {
- var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
- return alphabet[rand(0,alphabet.length - 1)].toUpperCase();
-}
-function getRandomWord(word) {
-  var text = word.innerHTML
-  
-  var finalWord = ''
-  for(var i=0;i<text.length;i++) {
-    finalWord += text[i] == ' ' ? ' ' : getRandomLetter()
-  }
- 
-  return finalWord
-}
-
-var word = document.querySelector('#titleText')
-var interv = 'undefined'
-var canChange = false
-var globalCount = 0
-var count = 0
-var INITIAL_WORD = "RESEARCHER";
-var isGoing = false
-var modVar = 0;
-
-function init() {
- if(isGoing) return;
- 
- isGoing = true
- var randomWord = getRandomWord(word)
- word.innerHTML = randomWord
-
- interv = setInterval(function() {
-  var finalWord = ''
-  for(var x=0;x<INITIAL_WORD.length;x++) {
-   if(x <= count && canChange) {
-    finalWord += INITIAL_WORD[x]
-   } else {
-    finalWord += getRandomLetter()
-   }
-  }
-  word.innerHTML = finalWord
-  if(canChange) {
-    count++
-  }
-  if(globalCount >= 20) {
-   canChange = true
-  }
-  if(count>=INITIAL_WORD.length) {
-   clearInterval(interv)
-   count = 0
-   canChange = false
-   globalCount = 0
-   isGoing = false
-   if(INITIAL_WORD === "ENGINEER")
-		INITIAL_WORD = "RESEARCHER";
-   else if(INITIAL_WORD === "RESEARCHER")
-		INITIAL_WORD = "DEVELOPER";
-	
-	else {
-			INITIAL_WORD = "ENGINEER";
-
-	}
-	setTimeout(init, 1000);
-  }
-  globalCount++
- },50)
- 
-}
-	function maybeOpen() {
-	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-	if (!isMobile)
-		openNav();
-	}
-	
-	</script>
-	  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129365440-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-129365440-1');
-</script>
-
+  </div>
+    </section>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
