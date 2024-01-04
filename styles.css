@@ -15,7 +15,7 @@ body, html {
 
 @media (orientation: portrait) and (max-width: 1200px){
     .cover{
-        background-image: url("./assets/cover-v4.png");
+        background-image: url("./assets/cover-v5.png");
     }
 }
 
